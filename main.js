@@ -110,10 +110,6 @@ if (trip === "undefined") {
 
 }
 
-if (text[0] == config.cmdPrefix && text[1] == "h" && text[2] == "e" && text[3] == "l" && text[4] == "p") {
-	chat.sendMessage("!say");
-}
-
 if (text[0] == config.cmdPrefix && text[1] == "s" && text[2] == "a" && text[3] == "y") {
 	var i;
 	var txt = "";
@@ -129,6 +125,44 @@ if (text[0] == config.cmdPrefix && text[1] == "s" && text[2] == "a" && text[3] =
 		}
 	}
 	chat.sendMessage(txt);
+}
+
+if (text[0] == config.cmdPrefix && text[1] == "b" && text[2] == "6" && text[3] == "4" && text[4] == "e" && text[5] == "n" && text[6] == "c") {
+	var i;
+	var txt = "";
+	for (i = 0; i < text.length; i++)
+	{
+		if (i == 0 || i == 1 || i == 2 || i == 3 || i == 4 || i == 5 || i == 6)
+		{
+			txt = txt + "";
+		}
+		else
+		{
+			txt = txt + text[i];
+		}
+	}
+	var b = new Buffer(txt);
+	var s = b.toString('base64');
+	chat.sendMessage(s)
+}
+
+if (text[0] == config.cmdPrefix && text[1] == "b" && text[2] == "6" && text[3] == "4" && text[4] == "d" && text[5] == "e" && text[6] == "c") {
+	var i;
+	var txt = "";
+	for (i = 0; i < text.length; i++)
+	{
+		if (i == 0 || i == 1 || i == 2 || i == 3 || i == 4 || i == 5 || i == 6)
+		{
+			txt = txt + "";
+		}
+		else
+		{
+			txt = txt + text[i];
+		}
+	}
+	var b = new Buffer(txt, 'base64')
+	var s = b.toString();
+	chat.sendMessage(s); 
 }
 
 if (text == "hello" || text == "hi") {
