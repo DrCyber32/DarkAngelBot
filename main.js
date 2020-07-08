@@ -166,7 +166,7 @@ if (text[0] == config.cmdPrefix && text[1] == "b" && text[2] == "6" && text[3] =
 }
 
 if (text == "hello" || text == "hi") {
-	chat.sendMessage("welcome @"+nick);
+	chat.sendMessage("welcome to chat @"+nick);
 }
 
 });
